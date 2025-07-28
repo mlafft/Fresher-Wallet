@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 85vh; */
+    padding-top: 70px;
+}
+
+label {
+    padding-left: 8px;
+}
+
+.title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-left: 15px;
+}
+.title-row {
+    letter-spacing: 10px;
+    font-weight: normal;
+    font-size: 42px;
+    text-transform: uppercase;
+}
+
+.sign-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-line {
+    width: 300px;
+    margin-bottom: 8px;
+    padding-top: 2px;
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.button {
+    width: 300px;
+    margin-bottom: 10px;
+    border: none;
+    transition: 0.45s;
+}
+.button:hover {
+    transition: 0.30s;
+}
+.button:active {
+    transform: translate(0px, 1px);
+    box-shadow: none;
+}

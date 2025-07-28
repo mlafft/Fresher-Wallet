@@ -1,0 +1,7 @@
+.transparent {
+    transition: all .8s ease;
+}
+
+.hidden {
+    opacity: 0;
+}

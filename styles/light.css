@@ -1,0 +1,101 @@
+::-webkit-scrollbar {
+    width: 9px;
+    height: 0;
+  }
+::-webkit-scrollbar-thumb {
+    background-color: #00000043;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: #00000000;
+    border-radius: 5px
+}
+
+body {
+    background-color: blanchedalmond;
+    color: black;
+}
+
+a {
+    color: black;
+}
+
+#switch-theme {
+    border: 2px solid #000000;
+    color: black;
+    background-color: #000000;
+}
+
+.r-line {
+    background-color: rgba(0, 0, 0, 0.1);
+} 
+.c-line {
+    background-color: rgba(0, 0, 0, 0.102);
+}
+
+.expense-amount {
+    color: #E33A3A;
+}
+.income-amount {
+    color: #38bb67;
+}
+.remain-amount {
+    color: #d3bc60;
+}
+
+.borders {
+    border: 2px solid #d3bc60;
+    border-radius: 10px;
+    cursor: pointer;
+    color: blanchedalmond;
+    background-color: #d3bc60;
+}
+.borders:hover {
+    border: 2px solid #e3c85f;
+    background-color: #e3c85f;
+    box-shadow: 0px 0px 14px 0 #e3c85f;
+} 
+
+
+.balance-check {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fbecd6;
+}
+
+label {
+    color: rgba(0, 0, 0, 0.4);;
+}
+input {
+    color: black;
+    background-color: #0000002a;
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+}
+
+.check-row {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.row-2 {
+    color: rgba(0, 0, 0, 0.4);;
+}
+
+.check-amount {
+    color: #38bb67;
+}
+
+
+/* AUF */
+
+.input-line {
+    border: 2px solid #0000001a;
+}
+
+.button {
+    background-color: #84dd86;
+}
+.button:hover {
+    box-shadow: 0px 0px 14px 0 #5cbe5d;
+}
