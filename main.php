@@ -1,43 +1,55 @@
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <title>Fresher Wallet</title>
-        
-        <?php require_once "./components/head.php"?>
-    </head>
-    <body>
-        <button id="switch-theme"></button>
-        
-        <?php include_once "components/form.php"?>
-        
-        <button class=" logout button"><a href="./log_out.php">выйти</a></button>
+<?php
 
-        <section class="header">
-            <div class="container">
+    $name  = 'ariadenus';
+    $array = [["name" => "ariadenus", "inner" => ["pregnant" => "mistake", "arrives" => "miscake"]], ["name" => "mdnh"]];
+    
+    create_obj ($array);
 
-                <div class="profile"> 
-                    <div class="account"><?=$_SESSION['user']['name']?></div>
-                </div>
+    function create_obj ($array)
+    {
+        echo '[';
 
-                <?php include_once "components/balance.php"?>
+        for ($i = 0; $i < count ($array); $i++):
 
-            </div>
-        </section>
-        <section class="main">
-            <div class="container">
+            echo '{';
+            foreach ($array[$i] as $key => $value):
 
-                <div class="add-new">
-                    <div class="borders" onmousedown="return false">добавить</div>
-                </div>
+                if ($array[$i][$key] != end ($array[$i])):
 
-                <div class="storage">
-                    <?php include_once "components/load.php" ?>
-                </div>
+                    echo '"'. $key .'": '. check_array ($value) .'",';
 
-            </div>
-        </section>
-        <footer class="footer"></footer>
+                elseif ($array[$i] == end ($array) && $array[$i][$key] == end ($array[$i])):
 
-        <script src="script/main.js"></script>
-    </body>
-</html>
+                    echo '"'. $key .'": '. check_array ($value) .'"}]';
+                else:
+
+                    echo '"'. $key .'": '. check_array ($value) .'},';
+                endif;
+
+            endforeach;
+        endfor;
+
+    }
+
+    function check_array ($input): string
+    {
+        if (is_array ($input))
+        {
+            $result = "{";
+
+            foreach ($input as $key => $value):
+
+                if ($value != end ($input)):
+                    $result .= "\"{$key}\": \"{$value}\",\n\t\t";
+                else:
+                    $result .= "\"{$key}\": \"{$value}\"";
+                endif;
+            
+            endforeach;
+            return $result . "}";
+        }
+        else return '"' . $input;
+
+    }
+
+?>

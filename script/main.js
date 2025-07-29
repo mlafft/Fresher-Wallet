@@ -14,9 +14,12 @@ let date = new Date ();
 if (date.getHours () > 20 || date.getHours () < 8) links[2].disabled = true;
 else links[1].disabled = true;
 
-theme.addEventListener ('click', switchTheme);
-addNew.addEventListener ('click', inputs);
-addCheck.addEventListener ('click', () => {table.classList.add('hidden')});
+if (addNew != null)
+{
+    theme.addEventListener ('click', switchTheme);
+    addNew.addEventListener ('click', inputs);
+    addCheck.addEventListener ('click', () => {table.classList.add('hidden')});
+}
 
 // console.log (date.getHours ());
 
