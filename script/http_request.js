@@ -1,12 +1,24 @@
-const URL  = 'https://fresher-wallet/main.php';
-const tag = document.querySelector ('.name');
+const URL     = 'https://fresher-wallet/';
+const addres  = 'http_requests/income.php';
 
-http_request (URL);
+const tag     = document.querySelector ('.name');
+const form    = document.querySelector ('form');
+const button  = document.querySelector ('button');
 
-async function http_request (URL)
+options = {
+    method: 'POST',
+    body: new FormData (form)
+}
+
+// http_request (URL + addres, options);
+
+form.addEventListener ('submit', () => http_request (URL + addres, options));
+
+async function http_request (URL, options)
 {
-    let response = await fetch (URL);
+    let response = await fetch (URL, options);
     let content  = await response.json ();
     
-    tag.textContent = content[0].name;
+    console.log (response.status);
+    console.log (content);
 }

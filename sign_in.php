@@ -6,10 +6,10 @@ include_once "./vendor/session.php";
 //     print_r ($_SESSION);
 // endif;
 
-// if (!empty ($_SESSION['id']) ):
-//     header ("Location: /index.php");
-//     exit;
-// endif;
+if (!empty ($_SESSION['id']) ):
+    header ("Location: /index.php");
+    exit;
+endif;
 
 ?>
 

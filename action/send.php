@@ -1,10 +1,6 @@
 <?php
 
-session_start ();
-
 include_once "vendor/session.php";
-include_once "vendor/headers.php";
-// include_once "vendor/db.php";
 
 $values = ':user_id, :amount, :sign, :category, :method, :comment, :date';
 $fields = 'user_id, amount, sign, category, method, comment, date';
@@ -30,8 +26,7 @@ if (!empty ($_POST) && $_SERVER['REQUEST_METHOD']):
         'date'     => $_POST['date']
     ]);
 
-    redirect ('/');
-    
-    // header("Location: /index.php");
-    // exit;
+    header("Location: /index.php");
+    exit;
+
 endif;
